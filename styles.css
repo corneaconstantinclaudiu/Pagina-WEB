@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1; 
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: #0a0229;
+    margin-bottom: 0.5em;
+}
+
+.main-header {
+    background: #334246; 
+    color: #fafafa; 
+    padding: 1rem 20px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+.main-header h1 {
+    color: #007bff; 
+    margin-bottom: 0;
+}
+
+.main-header nav a {
+    color: #333; 
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+.main-header nav a:hover {
+    color: #0056b3; 
+}
+
+.section {
+    padding: 40px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+.about-content {
+    display: flex; 
+    align-items: flex-start; 
+    gap: 30px; 
+}
+
+.profile-photo {
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%;
+    object-fit: cover; 
+    border: 3px solid #180242; 
+    flex-shrink: 0; 
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: space-around; 
+}
+
+.project-card {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 20px); 
+    min-width: 280px; 
+}
+
+.project-card h3 {
+    color: #333;
+    font-size: 1.4em;
+}
+
+.btn {
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto; 
+}
+
+
+@media (max-width: 600px) {
+    
+    .main-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-header nav {
+        margin-top: 10px;
+    }
+
+    .main-header nav a {
+        margin: 0 5px;
+        display: inline-block;
+    }
+     .about-content {
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center;
+    }
+
+    .project-card {
+        flex: 1 1 100%; 
+    }
+}
